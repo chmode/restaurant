@@ -1,0 +1,568 @@
+@font-face{
+    font-family: andi;
+    src: url(../font/IndieFlower-Regular.ttf);
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: andi;
+}
+
+/* ----------------------------------------------------------------------------------- */
+
+.header{
+    background-color: bisque;
+    display: flex;
+    justify-content: space-between;
+}
+.header .logo img{
+    width: 150px;
+}
+.header .logo{
+    align-self: center;
+}
+.header .homm-img img{
+    width: 130px;
+    padding: 10px;
+    transition: 0.3s;
+}
+.header .homm-img img:hover{
+    transform: scale(1.1);
+}
+
+/* search */
+
+.header .search #check{
+    display: none;
+}
+.header .search .search-icon img{
+    width: 50px;
+    display: inline;
+}
+.header .search{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: flex-end;
+    max-width: 300px;
+    width: 100%;
+    margin: 30px;
+    height: 0px;
+}
+.header .search .search-bar{
+    width: 0%;
+    height: 50px;
+    transition: 0.3s;
+}
+.header .search .search-bar input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    font-size: 18px;
+    border-radius: 20px 0px 0px 20px;
+}
+.header .search .search-icon{
+    height: 0px;
+}
+.header .search .search-icon img{
+    background-color: beige;
+    border-radius: 0px 20px 20px 0px;
+}
+.header .search #check:checked + .search-bar{
+    width: 100%;
+    
+}
+/* ----------------------------------------------------------------------------------------------- */
+.section{
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0px;
+}
+.section .food-liste{
+    background-color: aquamarine;
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.section .food-liste ul{
+    list-style: none;
+    display: flex;
+}
+.section .food-liste ul li img{
+    width:500px;
+    height: 500px;
+}
+.section .food-liste ul li{
+    max-width: 500px;
+    width: 160px;
+    transition: 0.3s;
+}
+.section .food-liste ul:hover li{
+    width: 75px;
+}
+.section .food-liste ul li:hover{
+    width: 500px;
+}
+.section .food-liste p:hover + li{
+    width: 500px;
+}
+.section .food-liste .food-1,
+.section .food-liste .food-2,
+.section .food-liste .food-3,
+.section .food-liste .food-4,
+.section .food-liste .food-5{
+    position: relative;
+}
+.section .food-liste p{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: red;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+}
+.section .food-liste p:hover{
+    font-size: 30px;
+}
+/* ---------------------------------------------------------------------------------------------------- */
+.section-2{
+    background-color: #808080cc;
+    display: flex;
+    justify-content: center;
+
+}
+.section-2 .fast-food-chains{
+    /*background-color: blueviolet;*/
+    max-width: 800px;
+    width: 100%;
+}
+.section-2 .fast-food-chains a{
+    position: relative;
+    left: 50%;
+    line-height: 60px;
+    text-decoration: none;
+    font-size: 30px;
+}
+.section-2 .fast-food-chains .info .im{
+    display: flex;
+    justify-content: center;
+}
+.section-2 .fast-food-chains .info .text{
+    padding: 10px 0px 0px 15px;
+    font-size: 20px;
+}
+.section-2 .fast-food-chains a:hover{
+    padding-left: 10px;
+}
+.section-2 .fast-food-chains .info{
+    display: none;
+}
+.section-2 .fast-food-chains :target{
+    display: block;
+}
+/* --------------------------------------------------------------------------------------------- */
+.recipes{
+    background-color: rgb(132 140 131 / 96%);
+    display: flex;
+    justify-content: center;
+}
+.recipes article h1{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+}
+.recipes article p{
+    padding: 0px 10px;
+    font-size: 20px;
+}
+.recipes article{
+    background-color: #fcf69b;
+    max-width: 600px;
+    width: 100%;
+    height: 300px;
+    margin: 50px 0px;
+    position: relative;
+    z-index: 0;
+}
+.recipes article:before,
+.recipes article:after{
+    content: "";
+    background-color: #fcf69b;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; 
+    z-index: -1;
+    transition: 0.3s;
+}
+.recipes article:before{
+    transform: rotate(4deg);
+}
+.recipes article:after{
+    transform: rotate(-4deg);
+}
+.recipes article:hover:before,
+.recipes article:hover:after{
+    transform: rotate(0deg);
+}
+/* ------------------------------------------------------------------------------------------------ */
+.food-gallery{
+    background-color: blanchedalmond;
+    height: 650px;
+    padding: 30px 0px 0px 100px;
+}
+.food-gallery .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 620px;
+    height: 620px;
+    background-color: rgb(33, 167, 167);
+    position: relative;
+}
+.food-gallery div{
+    width: 300px;
+    height: 200px;
+}
+.food-gallery div img{
+    width: 100%;
+    height: 100%;
+}
+.food-gallery div span img{
+    width: 800px;
+    height: 620px;
+    border: 5px solid black;
+}
+.food-gallery span{
+    position: absolute;
+    left: 620px;
+    top: 0;
+    display: none;
+}
+.food-gallery div img:hover + span{
+    display: block; 
+}
+
+/* ----------------------------------------------------------------------------------------------------------- */
+.button{
+    width: 100%;
+    height: 200px;
+    background-color: rgba(33, 167, 167, 0.233);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button > a{
+    display: block;
+    width: 200px;
+    height: 50px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    padding: 10px;
+    background-color: #2b9ae2;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 25px #2b9ae2d6, 0px 30px 18px rgb(0 0 0);
+}
+.button > a:active{
+    position: relative;
+    top: 3px;
+    box-shadow: 0px 10px #2b9ae2d6, 0px 10px 18px rgb(0 0 0);
+}
+/* ---------------------------------------------------------------------------------------------------------------------- */
+.hover-me{
+    background-color: pink;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    perspective: 900px; /* worck with children but write at tha parent */
+}
+.hover-me .liste{
+    margin: 0% 0% 0% 80%;
+}
+.hover-me .liste > ul{
+    list-style: none;
+}
+.hover-me .liste >ul >li{
+    line-height: 50px;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: white;
+}
+.hover-me .second-layer{
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+}
+.hover-me .second-layer > h1{
+    font-size: 50px;
+    color: white;
+}
+.hover-me:hover .second-layer{
+    transform:  rotateY(25deg) scale(0.6);
+}
+.hover-me .liste >ul >li:hover{
+    transform: scale(1.3);
+}
+/* --------------------------------------------------------------------------------------------------- */
+.accordion{
+    background-color: rgba(33, 167, 167, 0.233);
+    display: flex;
+    justify-content: center;
+}
+.accordion .toop-foods{
+    margin: 20px 0px;
+}
+.accordion .toop-foods div > input{
+    display: none;
+}
+.accordion .toop-foods div p{
+    background-color: rgba(27, 41, 41, 0.26);
+    width: 500px;
+    height: 0;
+    overflow: hidden;
+    font-size: 20px;
+    transition:  height 0.3s;
+}
+.accordion .toop-foods div > label{
+    cursor: pointer;
+    font-size: 30px;
+    display: block;
+    width: 500px;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: rgba(27, 41, 41, 0.616);
+}
+.accordion .toop-foods div:not(:last-of-type) label{
+    margin-bottom: 1px;
+}
+.accordion .toop-foods div{
+    line-height: 50px;
+}
+.accordion .toop-foods div input:checked ~ p{
+    border-left: 1.5px solid rgba(27, 41, 41, 0.616);
+    border-right: 1.5px solid rgba(27, 41, 41, 0.616);
+    border-bottom: 1.5px solid rgba(27, 41, 41, 0.616);
+    padding: 10px;
+    height: fit-content;
+    margin-bottom: 1px;
+}
+.accordion .toop-foods div input:checked + label{
+    margin-bottom: 0px;
+}
+/* ---------------------------------------------------------------------------------- */
+.frame{
+    background-color: navajowhite;
+    height: 600px;
+    display: flex;
+}
+.frame .mydiv{
+    background-color: tan;
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    position: relative;
+    /*border: 5px solid black;*/
+}
+.frame .mydiv p{
+    padding: 10px;
+    text-align: center;
+}
+.frame .mydiv span{
+    position: absolute;
+    transition: 0.5s;
+}
+.frame .mydiv span:nth-of-type(1),
+.frame .mydiv span:nth-of-type(4){
+    background-color: rgb(253, 201, 105);
+}
+.frame .mydiv span:nth-of-type(2),
+.frame .mydiv span:nth-of-type(3){
+    background-color: rgb(10, 221, 10);
+}
+.frame .mydiv span:nth-of-type(1),
+.frame .mydiv span:nth-of-type(3){
+    width: 0;
+    height: 3px;
+}
+.frame .mydiv span:nth-of-type(2),
+.frame .mydiv span:nth-of-type(4){
+    height: 0;
+    width: 3px;
+}
+.frame .mydiv span:nth-of-type(1),
+.frame .mydiv span:nth-of-type(4){
+    top: 0;
+    left: 0;
+}
+.frame .mydiv span:nth-of-type(2),
+.frame .mydiv span:nth-of-type(3){
+    bottom: 0;
+    right: 0;
+}
+
+.frame .mydiv:hover span:nth-of-type(1),
+.frame .mydiv:hover span:nth-of-type(3){
+    width: 100%;
+}
+.frame .mydiv:hover span:nth-of-type(2),
+.frame .mydiv:hover span:nth-of-type(4){
+    height: 100%;
+}
+/* ------------------------------------------------------------------------------------ */
+.loading{
+    background-color: cornsilk;
+    height: 600px;
+    display: flex;
+}
+.loading .load{
+    background-color: rgb(146, 130, 64);
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    border-radius: 50%;
+    border: 100px solid aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: loading 3s linear infinite;
+}
+.loading .load p{
+    font-size: 50px;
+    color: black;
+    text-align: center;
+}
+.loading .load:hover{
+    animation-play-state: paused;
+}
+@keyframes loading{
+    0%{
+        border-top-color: aquamarine;
+        border-right-color: aquamarine;
+        border-bottom-color: aquamarine;
+        border-left-color: rgb(147, 9, 160);
+    }
+    25%{
+        border-top-color: rgb(253 201 105);
+        border-right-color: aquamarine;
+        border-bottom-color: aquamarine;
+        border-left-color: aquamarine;
+    }
+    50%{
+        border-top-color: aquamarine;
+        border-right-color: rgb(185, 62, 4);
+        border-bottom-color: aquamarine;
+        border-left-color: aquamarine;
+    }
+    75%{
+        border-top-color: aquamarine;
+        border-right-color: aquamarine;
+        border-bottom-color: rgb(3, 97, 32);
+        border-left-color: aquamarine;
+    }
+    100%{
+        border-top-color: aquamarine;
+        border-right-color: aquamarine;
+        border-bottom-color: aquamarine;
+        border-left-color: rgb(147, 9, 160);
+    }
+}
+/*------------------------------------------------------------------------------------------------------------*/
+.key-mode{
+    height: 250px;
+    background-color: honeydew;
+}
+.key-mode h1{
+    text-align: center;
+    font-size: 50px;
+    padding: 20px;
+}
+.key-mode input{
+    display: none;
+}
+.key-mode .first-layer{
+    /*display: block;*/
+    width: 400px;
+    height: 100px;
+    background-color: gray;
+    cursor: pointer;
+    margin: 0px auto;
+    position: relative;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    transition-delay: .2s;
+}
+.key-mode .first-layer > span{
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-color: rgb(68, 66, 66);
+    border-radius: 30px;
+    position: absolute;
+    left: 10px;
+    transition: 0.3s ease-in-out;  /* transition-timing-function => cubic-bezier */
+    /*left: 10px;
+    top: 50%;
+    transform: translateY(-50%);*/
+}
+.key-mode input:checked + .first-layer{
+    background-color: green;
+}
+.key-mode input:checked + .first-layer span{
+    background-color: white;
+    transform: translateX(300px);
+}
+/* -------------------------------------------------------------------------------------------------------------------------- */
+.effect{
+    background-color: bisque;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.effect button{
+    width: 300px;
+    height: 100px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 30px;
+    border: none;
+    background-color: aqua;
+    position: relative;
+    overflow: hidden;
+}
+.effect button::before{
+    content: "";
+    position: absolute;
+    border-radius: 30px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent,white,transparent);
+    top: -100%;
+    left: 0%;
+    transition: 0.3s ease-in-out;
+}
+.effect button:hover::before{
+    top: 100%;
+}
